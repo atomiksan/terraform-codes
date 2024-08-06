@@ -1,8 +1,10 @@
 provider "aws" {
-    region = "us-east-1" ##Set your desired AWS region
+  region = "us-east-1" ##Set your desired AWS region
 }
 
 resource "aws_instance" "test" {
-  ami                     = "ami-0c55b159cbfafe1f0" ## specify appropriate  AMI ID
-  instance_type           = "t2.micro"
+  ami                     = "ami-04a81a99f5ec58529" ## specify appropriate  AMI ID
+  instance_type           = "t2.micro"  
+  subnet_id = "subnet-031a5c52371f694d6"
+  key_name = "ssh_key_pair"
 }
