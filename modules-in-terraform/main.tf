@@ -4,8 +4,8 @@ provider "aws" {
 
 module "ec2_instances" {
     source = "./modules/ec2_instances"
-    ami = "ami-04a81a99f5ec58529"
-    instance_type = "t2.micro"
-    subnet_id = "subnet-031a5c52371f694d6"
-    key_name = "ssh_key_pair"
+    ami_value  = "ami-04a81a99f5ec58529"
+    instance_type_value = "t2.micro"
+    subnet_id_value = "subnet-031a5c52371f694d6"
+    key_name_value = "ssh_key_pair"
 } 

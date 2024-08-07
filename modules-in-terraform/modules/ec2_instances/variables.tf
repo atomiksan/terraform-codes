@@ -1,15 +1,15 @@
-variable "ami" {
+variable "ami_value" {
   description = "ami value"
 }
 
-variable "instance_type" {
+variable "instance_type_value" {
   description = "instance type"
 }
 
-variable "subnet_id" {
+variable "subnet_id_value" {
   description = "subnet id"
 }
 
-variable "key_name" {
+variable "key_name_value" {
   description = "login ssh key pair"  
 }
