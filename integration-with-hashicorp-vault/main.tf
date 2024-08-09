@@ -16,3 +16,15 @@ provider "vault" {
   }
 }
 
+data "vault_kv_secret_v2" "example" {
+  mount = "kv"
+  name  = "test-kv"
+}
+
+resource "aws_instance" "test" {
+    ami = "ami-04a81a99f5ec58529"
+    instance_type = "t2.micro"
+    tags = {
+        secret = data.vault_kv_secret_v2.example.data["<Key-name>"]
+    }  
+}
